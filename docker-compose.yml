@@ -11,6 +11,8 @@ services:
       - db
     tty: true
     stdin_open: true
+    environment:
+       - SECRET_KEY_BASE=AfEFSRqGTBDaFSEwq12
   db:
     image: mysql:8.0
     volumes:
