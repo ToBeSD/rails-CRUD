@@ -16,3 +16,5 @@ RUN bundle install
 ENV RAILS_ENV production
 
 COPY . .
+
+COPY init.sql /docker-entrypoint-initdb.d/
