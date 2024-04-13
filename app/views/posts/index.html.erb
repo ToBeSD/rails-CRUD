@@ -1,4 +1,9 @@
 <h1>Rails 投稿一覧</h1>
+
+<% if notice %>
+  <p class="notice"><%= notice %></p>
+<% end %>
+
 <ul>
   <% @posts.each do |post| %>
     <li><%= post.title %></li>
