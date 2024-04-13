@@ -17,10 +17,13 @@
 ## 環境構築
 
 ```
-1. $ git clone
-2. $ docker compose build
-3. $ docker compose run web rails db:migrate
-4. $ docker compose up -d
+$ git clone
+$ docker compose build
+$ docker compose up -d
+$ docker compose run web bash
+
+:/app# bundle install
+:/app# rails db:migrate
 ```
 
 ## mysqlに接続するコマンド
