@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-    before_action :set_post, only: [:edit]
+    before_action :set_post, only: [:edit, :update]
 
     def index
         @posts = Post.all
@@ -19,6 +19,12 @@ class PostsController < ApplicationController
 
     def edit
         # before_actionでset_posメソットを実行するようにしたので@postが設定された
+    end
+
+    def update
+        if @post.update(post_params)
+            redirect_to posts_path, notice: '投稿を編集しました。'
+        end
     end
 
     private
