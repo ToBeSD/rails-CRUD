@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-    before_action :set_post, only: [:edit, :update]
+    before_action :set_post, only: [:edit, :update, :destroy]
 
     def index
         @posts = Post.all
@@ -24,6 +24,12 @@ class PostsController < ApplicationController
     def update
         if @post.update(post_params)
             redirect_to posts_path, notice: '投稿を編集しました。'
+        end
+    end
+
+    def destroy
+        if @post.destroy
+            redirect_to posts_path, notice: '投稿を削除しました。'
         end
     end
 
