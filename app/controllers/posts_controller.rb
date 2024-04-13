@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+    before_action :set_post, only: [:edit]
+
     def index
         @posts = Post.all
     end
@@ -15,8 +17,16 @@ class PostsController < ApplicationController
         end
     end
 
+    def edit
+        # before_actionでset_posメソットを実行するようにしたので@postが設定された
+    end
+
     private
     def post_params
         params.require(:post).permit(:title, :body)
+    end
+
+    def set_post
+        @post = Post.find(params[:id])
     end
 end
