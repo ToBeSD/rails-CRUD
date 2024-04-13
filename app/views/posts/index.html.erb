@@ -9,6 +9,7 @@
     <li>
       <%= post.title %>
       <a href="<%= edit_post_path(post.id) %>">編集</a>
+      <%= link_to "削除", post_path(post.id), method: :delete, data: { turbo_method: 'delete', turbo_confirm: '本当に削除しますか' } %>
     </li>
   <% end %>
 </ul>
