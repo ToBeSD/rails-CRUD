@@ -2,15 +2,15 @@
 
 ## 勉強したこと
 
-RailsプロジェクトのDockerコンテナを作る
+- RailsプロジェクトのDockerコンテナを作る
 
-RailsのModel、Controller、Viewの命名規則
+- RailsのModel、Controller、Viewの命名規則
 
-RailsのRouteについて
+- RailsのRouteについて
 
-RailsのMigrationについて
+- RailsのMigrationについて
 
-RailsでCRUD機能を実装する方法
+- RailsでCRUD機能を実装する方法
 
 ## mysqlに接続するコマンド
 
